@@ -10,9 +10,7 @@ class ItemService {
 
     def RestResponse getItemList() {
 
-        String url = """https://api.mercadolibre.com/items
-            ?attributes=id,title,base_price,date_created
-            &ids=MLM467177444,MLM467177445"""
+        String url = "https://api.mercadolibre.com/items?attributes=id,title,base_price,date_created&ids=MLM467177444,MLM467177445"
 
         return restClientService.getResponse(url)
 
