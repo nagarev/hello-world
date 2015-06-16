@@ -1,4 +1,4 @@
-package helloworld
+package helloworld.core
 
 import grails.plugins.rest.client.RestResponse
 import grails.plugins.rest.client.RestBuilder

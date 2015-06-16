@@ -1,16 +1,20 @@
 package helloworld
 
+import groovy.json.JsonSlurper
 import grails.plugins.rest.client.RestResponse
 
 class ItemController {
 
+    def jsonSlurper = new JsonSlurper()
     def itemService
 
     def index() {
 
         RestResponse response = itemService.getItemList()
 
-        render response.json
+        def list = jsonSlurper.parseText(response.text)
+
+        [ list:list ]
 
     }
 
