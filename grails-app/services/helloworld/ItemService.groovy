@@ -27,4 +27,23 @@ class ItemService {
 
     }
 
+    def Response searchItems(searchTherms) {
+
+        String url = "https://api.mercadolibre.com/sites/MLU/search?q=" + searchTherms
+        Response response = restClientService.doGetRequest(url)
+
+        if (response.getCorrect()) {
+            response.setPayload(
+                    jsonParserService.getObjectList(
+                            response.getPayload().toString()
+                    ).getAt("results")
+            )
+        } else {
+            response.setPayload(false)
+        }
+
+        return response
+
+    }
+
 }

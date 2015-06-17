@@ -600,5 +600,26 @@ a.skip {
 }
 
 .page_topic {
-    margin-left: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.div_error_message {
+    color: #ff0000;
+    display: inline;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.div_search {
+    padding: 10px;
+    text-align: right;
+}
+
+.div_table {
+    padding: 10px;
+}
+
+.price_row {
+    text-align: right !important;
 }
