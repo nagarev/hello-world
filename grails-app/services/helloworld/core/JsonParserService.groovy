@@ -1,11 +1,15 @@
 package helloworld.core
 
-import grails.transaction.Transactional
+import groovy.json.JsonSlurper
 
-@Transactional
 class JsonParserService {
+    static transactional = false
 
-    def serviceMethod() {
+    def jsonSlurper = new JsonSlurper()
+
+    def Object getObjectList(String json) {
+
+        return jsonSlurper.parseText(json)
 
     }
 }

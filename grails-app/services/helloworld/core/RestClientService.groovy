@@ -7,7 +7,7 @@ import grails.transaction.Transactional
 @Transactional
 class RestClientService {
 
-    def RestResponse getResponse(String url) {
+    def RestResponse doGetRequest(String url) {
         def resp = new RestBuilder().get(url)
         return resp
     }
