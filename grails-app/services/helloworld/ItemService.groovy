@@ -1,22 +1,29 @@
 package helloworld
 
-import grails.transaction.Transactional
+import helloworld.core.Response
 
-@Transactional
 class ItemService {
+    static transactional = false
 
     def restClientService
     def jsonParserService
 
-    def Object getItemList() {
+    def Response getItemList() {
 
         String url = "https://api.mercadolibre.com/items?attributes=id,title,base_price,date_created&ids=MLM467177444,MLM467177445"
+        Response response = restClientService.doGetRequest(url)
 
-        def response = restClientService.doGetRequest(url)
+        if (response.getCorrect()) {
+            response.setPayload(
+                    jsonParserService.getObjectList(
+                            response.getPayload().toString()
+                    )
+            )
+        } else {
+            response.setPayload(false)
+        }
 
-        def list = jsonParserService.getObjectList(response.text)
-
-        return list
+        return response
 
     }
 

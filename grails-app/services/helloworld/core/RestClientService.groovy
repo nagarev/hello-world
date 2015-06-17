@@ -1,15 +1,26 @@
 package helloworld.core
 
-import grails.plugins.rest.client.RestResponse
 import grails.plugins.rest.client.RestBuilder
-import grails.transaction.Transactional
+import grails.plugins.rest.client.RestResponse
 
-@Transactional
 class RestClientService {
+    static transactional = false
 
-    def RestResponse doGetRequest(String url) {
-        def resp = new RestBuilder().get(url)
-        return resp
+    def Response doGetRequest(String url) {
+
+        Response response = new Response()
+        RestResponse restResponse = new RestBuilder().get(url)
+
+        response.setCorrect(false)
+        response.setPayload(restResponse)
+
+        if (restResponse.statusCode.value() == 200) {
+            response.setCorrect(true)
+            response.setPayload(restResponse.json)
+        }
+
+        return response
+
     }
 
 }

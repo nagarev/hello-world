@@ -12,4 +12,5 @@ class JsonParserService {
         return jsonSlurper.parseText(json)
 
     }
+
 }

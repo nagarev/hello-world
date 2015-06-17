@@ -1,14 +1,24 @@
 package helloworld
 
+import helloworld.core.Response
+
 class ItemController {
 
     def itemService
 
     def index() {
 
-        def list = itemService.getItemList()
+        def response = itemService.getItemList()
 
-        [ list:list ]
+        if (response.getCorrect()) {
+
+            [ list:response.getPayload(), error:false ]
+
+        } else {
+
+            [ error:true ]
+
+        }
 
     }
 
