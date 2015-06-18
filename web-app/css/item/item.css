@@ -1,0 +1,38 @@
+.page_topic {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.div_error_message {
+    color: #ff0000;
+    display: inline;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.div_search {
+    padding: 10px;
+    text-align: right;
+}
+
+.div_table {
+    padding: 10px;
+}
+
+.price_row {
+    text-align: right !important;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #999999;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}

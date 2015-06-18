@@ -11,6 +11,7 @@
     <meta name="layout" content="main" />
     <g:javascript library="jquery" />
     <title>Product List</title>
+    <link rel="stylesheet" href="${resource(dir: 'css/item', file: 'item.css')}" type="text/css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 update="[success: 'div_table', failure: 'div_error_message']"
                 on404="alert('Search Error!')">
             Search / Filter: <input name="searchTherms" value="${searchTherms}" type="text" />
-            <input name="search" value="Go!" type="submit" />
+            <input name="search" class="button" value="Go!" type="submit" />
         </g:formRemote >
     </div>
     <div id="div_table" class="div_table">
