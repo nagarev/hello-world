@@ -131,9 +131,9 @@ img {
 	width: 16px;
     padding: 0.5em;
     position: absolute;
-    right: 0;
-	top: 0;
-	text-indent: -9999px;
+    right: 15px;
+    text-indent: -9999px;
+	top: 35px;
 }
 
 /* NAVIGATION MENU */

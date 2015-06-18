@@ -26,27 +26,7 @@
         </g:formRemote >
     </div>
     <div id="div_table" class="div_table">
-        <g:if test="${error == false}">
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Price</th>
-                    <th>Sold</th>
-                </tr>
-                <g:each in="${list}" var="item">
-                    <tr>
-                        <td>${item.id}</td>
-                        <td>${item.title}</td>
-                        <td class="price_row">${item.price}</td>
-                        <td>${item.sold_quantity} / ${item.available_quantity}</td>
-                    </tr>
-                </g:each>
-            </table>
-        </g:if>
-        <g:else>
-            Se ha producido un error.
-        </g:else>
+        <g:render template="/item/itemList" />
     </div>
 </body>
 </html>
