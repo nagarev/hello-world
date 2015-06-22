@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
 	background-color: #ddd;
-	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
+	background-image: -moz-linear-gradient(center, top, #aaa, #ddd);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
 	background-image: linear-gradient(top, #aaa, #ddd);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
@@ -189,9 +189,8 @@ img {
 }
 
 .nav a.home, .nav a.list, .nav a.create {
-	background-position: 0.7em center;
-	background-repeat: no-repeat;
-	text-indent: 25px;
+    background: no-repeat 0.7em center;
+    text-indent: 25px;
 }
 
 .nav a.home {
@@ -458,9 +457,8 @@ th a:hover, th a:focus {
 }
 
 th.sortable a {
-	background-position: right;
-	background-repeat: no-repeat;
-	padding-right: 1.1em;
+    background: no-repeat right;
+    padding-right: 1.1em;
 }
 
 th.asc a {
@@ -572,9 +570,8 @@ th:hover, tr:hover {
 }
 
 .buttons .delete, .buttons .edit, .buttons .save {
-	background-position: 0.7em center;
-	background-repeat: no-repeat;
-	text-indent: 25px;
+    background: no-repeat 0.7em center;
+    text-indent: 25px;
 }
 
 .ie6 .buttons input.delete, .ie6 .buttons input.edit, .ie6 .buttons input.save,
@@ -597,4 +594,27 @@ th:hover, tr:hover {
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+.div_lang {
+    float:right;
+}
+
+.div_box {
+    padding: 10px;
+}
+
+.div_left {
+    float: left;
+    width: 80%;
+}
+
+.div_right {
+    float: right;
+}
+
+.img_active {
+    cursor: default;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
 }

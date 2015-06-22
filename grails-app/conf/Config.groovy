@@ -92,10 +92,12 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        helloworld.languagesList = ["en", "sp"]
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+        helloworld.languagesList = ["en", "sp"]
     }
 }
 

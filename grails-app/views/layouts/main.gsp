@@ -19,7 +19,12 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="meliLogo" role="banner"><a href="/helloworld"><img src="${resource(dir: 'images', file: 'logo-mercadolibre-new.png')}" alt="Meli Grails Test"/></a></div>
+		<div id="meliLogo" role="banner"><a href="/helloworld">
+			<img src="${resource(dir: 'images', file: 'logo-mercadolibre-new.png')}" alt="Meli Grails Test"/></a>
+			<div class="div_lang">
+                <g:render template="/layouts/languageControls" model="${pageScope.variables}" />
+			</div>
+		</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo">
 			Meli - Grails Test<br />
