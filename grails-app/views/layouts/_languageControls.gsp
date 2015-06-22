@@ -5,7 +5,7 @@
   Time: 15:53
 --%>
 <g:if test="${session.language == 'en'}">
-    <a href="/helloworld?lang=sp"><img src="${resource(dir: 'images', file: 'sp.png')}" alt="Spanish" title="Click to view in Spanish" /></a>
+    <a href="/helloworld?lang=es"><img src="${resource(dir: 'images', file: 'sp.png')}" alt="Spanish" title="Click to view in Spanish" /></a>
     <img src="${resource(dir: 'images', file: 'en.png')}" alt="English" title="Viewing in English" class="img_active" />
 </g:if>
 <g:else>

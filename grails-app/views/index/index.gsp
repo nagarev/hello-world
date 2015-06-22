@@ -10,26 +10,25 @@
 <head>
     <meta name="layout" content="main" />
     <g:javascript library="jquery" />
-    <title>Welcome!</title>
+    <title><g:message code="my.index.title" /></title>
     <link rel="stylesheet" href="${resource(dir: 'css/item', file: 'item.css')}" type="text/css">
 </head>
 
 <body>
-    <h1 class="page_topic">Welcome! <div id="div_error_message" class="div_error_message"></div></h1>
+    <h1 class="page_topic"><g:message code="my.index.title" /> <div id="div_error_message" class="div_error_message"></div></h1>
     <div id="div_table" class="div_box div_left">
-        <p><b>Greetings from Grails!</b></p>
+        <p><b><g:message code="my.index.greeting" /></b></p>
         <br />
-        <p>This is a small application to introduce myself to the fantastic world of Groovy &amp; Grails</p>
+        <p><g:message code="my.index.firstParagraph" /></p>
         <br />
         <p>
-            You're welcome to clone the <a href="https://github.com/nagarev/hello-world">repo at github</a> and use it
-            at your own risk!
+            <g:message code="my.index.secondParagraph" args="${['<a href="https://github.com/nagarev/hello-world" target="_blank">github</a>']}" encodeAs="None" />
         </p>
         <br />
-        <p>I hope you're going to enjoy it!</p>
+        <p><g:message code="my.index.thirdParagraph" /></p>
     </div>
     <div class="div_box div_right">
-        <p><b>Contents</b></p>
+        <p><b><g:message code="my.index.contents.title" /></b></p>
         <br />
         <p><a href="/helloworld/item/">Items</a></p>
         <p><a href="/helloworld/person/">Persons</a></p>
