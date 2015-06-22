@@ -9,21 +9,25 @@
 <html>
 <head>
     <meta name="layout" content="main" />
-    <title>Welcome to Grails</title>
+    <title><g:message code="my.person.index.title" /></title>
+    <link rel="stylesheet" href="${resource(dir: 'css/person', file: 'person.css')}" type="text/css">
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>Name</td>
-            <td>Age</td>
-        </tr>
-        <g:each in="${list}" var="person">
+    <h1 class="page_topic"><g:message code="my.person.index.title" /> <div id="div_error_message" class="div_error_message"></div></h1>
+    <div class="div_table">
+        <table>
             <tr>
-                <td>${person.lastName}, ${person.firstName}</td>
-                <td>${person.age}</td>
+                <th>Name</th>
+                <th>Age</th>
             </tr>
-        </g:each>
-    </table>
+            <g:each in="${list}" var="person">
+                <tr>
+                    <td>${person.lastName}, ${person.firstName}</td>
+                    <td>${person.age}</td>
+                </tr>
+            </g:each>
+        </table>
+    </div>
 </body>
 </html>

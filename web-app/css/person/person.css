@@ -1,0 +1,15 @@
+.page_topic {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.div_error_message {
+    color: #ff0000;
+    display: inline;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.div_table {
+    padding: 10px;
+}
